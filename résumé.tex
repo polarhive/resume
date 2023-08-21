@@ -1,0 +1,137 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\setmainfont{Mona-Sans}
+%\setmainfont{Inter}
+\usepackage[useregional]{datetime2}
+\setmonofont{JetBrains Mono}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}
+{\vspace{-4pt}\scshape\raggedright\large}
+  {}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\expItem}[1]{
+  \item\small{#1 \vspace{-3pt}}
+}
+\newcommand{\resumeSubheading}[4]{
+ \vspace{-1pt}\item
+ \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+   \textbf{#1} & #2 \\
+  \textit{\small#3} & \textit{\small #4} \\
+ \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeHeading}[5]{
+ \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+   \textbf{#1}
+   \cr \textit{#2}
+   &\textit{#3}
+   \cr \textit{#4}
+   & \textit{#5}
+ \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+\section{\Huge {\textbf {Nathan Matthew Paul}}}
+{\textbf{\href{mailto:mail@polarhive.net}{mail@polarhive.net}}}
+\newline
+{\href{https://polarhive.net/.well-known/polarhive_gpg.txt}{0x78DBFBE8B325A5A9}}
+
+\section{Links}
+{\textbf{\href{https://polarhive.net}{polarhive.net}}
+\newline
+{\href{https://matrix.to/#/@polarhive:matrix.org}{[matrix]}} //
+{\href{https://github.com/polarhive}{GitHub}} //
+{\href{https://youtube.com/polarhive}{YouTube}} //
+{\href{https://mastodon.social/@polarhive}{Mastodon}}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://pes.edu}{PES University}}{Bangalore, IN}
+      {B.Tech in Computer Science \& Engineering (expected)} {2023 -- 2027}
+    \resumeSubheading
+      {\href{https://primuspucollege.edu.in}{Primus PU College}}{Bangalore, IN}
+      {Grade 12 -- PUC}{2021 -- 2023}
+    \resumeSubheading
+      {\href{https://en.wikipedia.org/wiki/Bishop_Cotton_Boys'_School}{Bishop Cotton Boys' School}}{Bangalore, IN}
+      {Grade 10 -- ICSE}{2009 -- 2021}
+\resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://polarhive.net/ammachiskathas}{Ammachis Kathas}}
+      {Malayalam short-stories}
+    \resumeSubItem{\href{https://polarhive.net/videos}{videos}}
+      {I make videos about tech, privacy \& libre software}
+    \resumeSubItem{\href{https://polarhive.net/knowledge}{knowledge}}
+      {digital knowledge wiki}
+    \resumeSubItem{\href{https://polarhive.net/arceo}{arceo}}
+      {blocklist against social media, news, entertainment \& consumerism}
+    \resumeSubItem{\href{https://polarhive.net/jukebox}{jukebox}}
+      {Play LastFM recommendations on linux using: mpd, yt-dlp and bash}
+    \resumeSubItem{\href{https://polarhive.net/vulpes}{vulpes}}
+      {minimal Firefox userjs tweaked for privacy}
+    \resumeSubItem{\href{https://polarhive.net/pasta}{pasta}}
+      {minimal pastebin: written in go}
+  \resumeSubHeadingListEnd
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}
+      {English, Malayalam, Hindi}
+    \resumeSubItem{Computing}
+      {\textsc{C}, Git, {\textsc{BASH}}, vim, \textsc{Python}, GNU/Linux}
+    \resumeSubItem{Writing}
+      {Blogging, \LaTeX, Technical Writing, Free Software Documentation}
+    \resumeSubItem{Film}
+      {{\href{https://polarhive.net/videos}{YouTube}}, Kdenlive, Blender, mobile photography}
+  \resumeSubHeadingListEnd
+
+\section{Interests}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Privacy/Security}
+      {Digital-Privacy, Web-of-trust, Federated-Networks, Self-Hosting, Decentralization}
+    \resumeSubItem{Free/Libre Software}
+      {Copyleft, Automation \& Scripting, GNU/Linux pipes}
+    \resumeSubItem{Writing}
+      {Blogging, Creative Writing, précis writing}
+    \resumeSubItem{Film}
+      {Documentaries, feature-films, screenplay}
+  \resumeSubHeadingListEnd
+
+\fancyfoot[L]{\fontsize{8pt}{10pt}\selectfont\fontspec{Inter-Light}last updated: 2023-08-18}
+\end{document}
