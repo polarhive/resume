@@ -1,13 +1,16 @@
 \documentclass[letterpaper, 11pt]{article}
 \usepackage[empty]{fullpage}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage[hidelinks]{hyperref}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{datetime}
 \usepackage{enumitem}
+\usepackage{fancyhdr}
 \usepackage{fontspec}
+\usepackage{titlesec}
 \setmainfont{Mona Sans}
 %\setmainfont{Inter}
+\newfontfamily\interlight{Inter-Light}
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 \usepackage[useregional]{datetime2}
 \setmonofont{JetBrainsMono Nerd Font}
 
@@ -140,7 +143,7 @@
      {Mentor}
     \resumeSubItem{\href{https://pesuecc.acm.org}{ACM} PESU} 
      {Member}
-    \resumeSubItem{\href{https://gdsc.community.dev/pes-university-electronic-city-campus-bengaluru/}{GDSC} PESU }
+    \resumeSubItem{\href{https://gdsc.community.dev/pes-university-electronic-city-campus-bengaluru/}{GDSC} PESU}
      {Member}
   \resumeSubHeadingListEnd
 
@@ -150,5 +153,6 @@
      {Ranked 6th out of 250 people, who took part in a jeopardy-styled CTF hackathon}
   \resumeSubHeadingListEnd
 
-\fancyfoot[L]{\fontsize{8pt}{10pt}\selectfont\fontspec{Inter-Light}last updated: 2023-10-21}
+\pagestyle{fancy}
+\fancyfoot[L]{\fontsize{8pt}{10pt}\selectfont\interlight last updated: \today}
 \end{document}
