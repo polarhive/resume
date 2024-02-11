@@ -1,4 +1,4 @@
 #!/bin/sh
-tectonic résumé.tex
+tectonic résumé.tex --keep-intermediates
 xdg-open résumé.pdf
-cp résumé.pdf ~/.local/repos/website/static/assets/résumé.pdf
+cp résumé.pdf ~/.local/repos/site/static/assets/résumé.pdf
