@@ -1,160 +1,80 @@
-\documentclass[letterpaper, 11pt]{article}
-\usepackage[empty]{fullpage}
-\usepackage[hidelinks]{hyperref}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{datetime}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{fontspec}
-\usepackage{titlesec}
-\setmainfont{Mona Sans}
-\newfontfamily\interlight{Inter-Light}
-\newdateformat{mydate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
-\usepackage[useregional]{datetime2}
-\setmonofont{JetBrainsMono Nerd Font}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-\urlstyle{same}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-\titleformat{\section}
-{\vspace{-4pt}\scshape\raggedright\large}
-  {}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-\newcommand{\expItem}[1]{
-  \item\small{#1 \vspace{-3pt}}
-}
-\newcommand{\resumeSubheading}[4]{
- \vspace{-1pt}\item
- \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-   \textbf{#1} & #2 \\
-  \textit{\small#3} & \textit{\small #4} \\
- \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeHeading}[5]{
- \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-   \textbf{#1}
-   \cr \textit{#2}
-   &\textit{#3}
-   \cr \textit{#4}
-   & \textit{#5}
- \end{tabular*}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
+\documentclass[letter,12pt]{article}
+\usepackage{fontawesome5, fontspec, url, parskip, hyperref, color, graphicx, tabularx, enumitem, supertabular, titlesec, multicol, multirow, xcolor, geometry}
+\geometry{scale=0.9}
+\definecolor{linkcolour}{rgb}{0,0.2,0.9}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\newcolumntype{C}{>{\arraybackslash}X}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
 \begin{document}
-\section{\Huge {\textbf {Nathan Matthew Paul}}}
-{\textbf{\href{mailto:mail@polarhive.net}{mail@polarhive.net}}}
-\newline
-{\href{https://polarhive.net/.well-known/polarhive_gpg.txt}{0x78DBFBE8B325A5A9}}
-\section{Links}
-{\textbf{\href{https://polarhive.net}{polarhive.net}}
-\newline
-{\href{https://matrix.to/#/@polarhive:matrix.org}{[matrix]}} //
-{\href{https://github.com/polarhive}{GitHub}} //
-{\href{https://youtube.com/polarhive}{YouTube}} //
-{\href{https://mastodon.social/@polarhive}{Mastodon}} //
-{\href{https://www.linkedin.com/in/polarhive}{LinkedIn}}
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{}C@{}}
+\Huge{Nathan Paul} \\[10pt]
+\href{https://polarhive.net}{\faIcon{globe} polarhive.net} \ $|$ \ 
+\href{https://github.com/polarhive}{\faIcon{github} polarhive} \ $|$ \
+\href{https://linkedin.com/in/polarhive}{\faIcon{linkedin} polarhive} \ $|$ \ 
+\href{https://polarhive.net/.well-known/polarhive_gpg.txt}{\faIcon{lock} 0xB325A5A9} \ $|$ \ 
+\href{mailto:mail@polarhive.net}{\faIcon{envelope} mail@polarhive.net}
+\end{tabularx}
+
+\section{Experience}
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+    \textbf{Developer}, ACM Industrial Experience Program & \hfill Feb '24 - Apr '24 \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
+            \item Worked in a team of 4 to build a static site generator in Go called \textbf{anna}
+            \item Developed features such as a sitemap generator, atom feed, and Obsidian-like graphs.
+            \item Collaborated on building a setup wizard, bootstrapping themes, and improving CI/CD build pipelines..
+            \item Achieved a build time of \small{284.5 ms} for a 1000-file render benchmark, outperforming Hugo and 11ty..
+        \end{itemize}
+    \end{minipage}}
+\end{tabularx}
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  B.Tech in \textbf{Computer Science \& Engineering} (expected), \textbf{\href{https://pes.edu}{PES University}} & \hfill 2023 - 2027 \\[3.75pt]
+\end{tabularx}
+\textbf{ISFCR Dean's Award}: Ranked 6th out of 250 participants in a jeopardy-style CTF hackathon.
+
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
+            \item \textbf{{\href{https://www.hsp-ec.xyz}{HSP PESU}: Technical Mentor}} \hfill
+            \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
+                \item Mentored participants in building \href{https://github.com/psh-shell}{psh}, a POSIX-like shell. 
+                \item Delivered talks on \textbf{jukebox} and \textbf{anna} at the HSP Mentor Expo and Fireside talks.
+            \end{itemize}
+            \item \textbf{{\href{https://pesuecc.acm.org}{ACM PESU}: Member}} \hfill
+            \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
+                \item Helped fix CI-tooling and maintain the new club \href{https://acmpesuecc.github.io}{website}.
+                \item Mentored participants at various workshops at university.
+            \end{itemize}
+        \end{itemize}
+    \end{minipage}}
+\end{tabularx}
+
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Computing & \normalsize{C, Python, Git, Go, BASH, Vim, GNU/Linux} \\
+Writing  & \normalsize{Blogging, \LaTeX, Technical Writing, Free Software documentation} \\  
+Privacy/Security & \normalsize{Self-hosting \& decentralization, OSINT at CTFs} \\  
+\end{tabularx}
 
 \section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://polarhive.net/ammachiskathas}{Ammachis Kathas}}
-      {Malayalam short-stories (an audiobook)}
-    \resumeSubItem{\href{https://polarhive.net/videos}{videos}}
-      {I make videos about tech, privacy \& libre software}
-    \resumeSubItem{\href{https://polarhive.net/vulpes}{vulpes}}
-      {minimal Firefox userjs tweaked for privacy}
-    \resumeSubItem{\href{https://polarhive.net/arceo}{arceo}}
-      {blocklist against social media, news, entertainment \& consumerism}
-    \resumeSubItem{\href{https://polarhive.net/jukebox}{jukebox}}
-      {listen to your LastFM recommendations using: mpd, yt-dlp \& bash}
-    \resumeSubItem{\href{https://polarhive.net/pasta}{pasta}}
-      {minimal pastebin: written in go}
-    \resumeSubItem{\href{https://polarhive.net/py-typer}{py-typer}}
-      {a speedtyping-test: written in python}
-    \resumeSubItem{\href{https://github.com/acmpesuecc/anna}{anna}}
-      {lightning fast! static site generator: written in go. Built as a team part of {ACM-PESUECC's} {\href{https://acmpesuecc.github.io/aiep}{\textbf{AIEP}}} program}
-  \resumeSubHeadingListEnd
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \textbf{\href{https://github.com/anna-ssg/anna}{anna}} & Lightning fast static site generator written in Go \\
+    \textbf{\href{https://github.com/psh-shell/psh}{psh}} & A fancy POSIX like shell written in C \\
+    \textbf{\href{https://github.com/polarhive/py-typer}{py-typer}} & A speed typing test written in Python \\
+    \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}} & Listen to your LastFM music recommendations using mpd, yt-dlp \& bash \\
+    \textbf{\href{https://polarhive.net/pasta}{pasta}} & Simple pastebin service written in Go \\
+    \href{https://polarhive.net/videos}{videos} & I produce YouTube videos about tech, privacy \& libre software \\
+    \href{https://polarhive.net/arceo}{arceo} & A blocklist against social media, news, entertainment \& consumerism \\
+    \href{https://polarhive.net/ammachiskathas}{Ammachis Kathas} & Malayalam short stories (an audiobook) \\
+\end{tabularx}
 
-  \section{Awards}
-  \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://isfcr.pes.edu}{ISFCR} Dean Award}
-     {Ranked 6th out of 250 people, who took part in a jeopardy-styled CTF hackathon}
-  \resumeSubHeadingListEnd
-
-\section{Clubs \& Contributions}
-  \resumeSubHeadingListStart
-  \resumeSubItem{\href{https://www.hsp-ec.xyz}{HSP} -- Hackerspace}
-     {Mentor}
-     \begin{itemize}
-      \item{\textbf{Feb '24}: Helped participants navigate Docker at a university workshop}
-      \item \textbf{Nov '23}: Gave a talk on my project \textbf{/jukebox} at the HSP {\href{https://www.instagram.com/p/CzydraKSE8q/}{Mentor Expo}}
-    \end{itemize}
-    \resumeSubItem{\href{https://pesuecc.acm.org}{ACM} PESU} 
-     {Member}
-    \begin{itemize}
-      \item \textbf{Mar '24}: Helped fix CI-tooling and maintain the new website: \textbf{acmpesuecc.github.io}
-      \item \textbf{Feb '24}: Mentored participants at the WASM workshop
-  \end{itemize}
-   \resumeSubItem{\href{https://gdsc.community.dev/pes-university-electronic-city-campus-bengaluru/}{GDSC} PESU}
-     {Member}
-     \begin{itemize}
-     \item \textbf{Aug '23}: Part of the design team at Override, a Google Solutions Challenge themed hackathon at university
-    \end{itemize}
-  \resumeSubHeadingListEnd
-  
-
-  \section{Skills \& Interests}
-  \resumeSubHeadingListStart
-  \resumeSubItem{Computing}
-  {\textsc{C}, Git, \textsc{BASH}, \textsc{Python}, vim, \textsc{Go}, GNU/Linux and interested in systems programming}
-  \resumeSubItem{Writing}
-  {Blogging, \LaTeX, Technical Writing and Free Software documentation}
-  \resumeSubItem{Film \& Media}
-  {I produce videos for {\href{https://polarhive.net/videos}{YouTube}} using Kdenlive, Blender and GIMP}
-  \resumeSubItem{Privacy/Security}
-  {Interested designing zero-knowledge systems, web-of-trust, federated protocols, self-hosting \& decentralization. OSINT \& CTFs}
-  \resumeSubItem{Free/Libre Software}
-  {Understanding of copyleft, licensing, automation, shell-scripting \& CI/CD toolchains}
-  \resumeSubHeadingListEnd
-  
-  \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\href{https://pes.edu}{PES University}}{Bangalore, IN}
-      {B.Tech in Computer Science \& Engineering (expected)} {2023 -- 2027}
-    \resumeSubheading
-      {\href{https://primuspucollege.edu.in}{Primus PU College}}{Bangalore, IN}
-      {Grade 12 -- Pre University}{2021 -- 2023}
-    \resumeSubheading
-      {\href{https://en.wikipedia.org/wiki/Bishop_Cotton_Boys'_School}{Bishop Cotton Boys' School}}{Bangalore, IN}
-      {Grade 10 -- ICSE}{2009 -- 2021}
-\resumeSubHeadingListEnd
-
-\pagestyle{fancy}
-\fancyfoot[L]{\href{https://codeberg.org/polarhive/resume}{⟳ \fontsize{8pt}{10pt}\selectfont\interlight last updated: \today}}
+\vfill
+\href{https://github.com/polarhive/resume}{\faIcon{history}}: Last build \today
 \end{document}
