@@ -1,14 +1,15 @@
-\documentclass[letter,12pt]{article}
-\usepackage{fontawesome5, fontspec, url, parskip, hyperref, color, graphicx, tabularx, enumitem, supertabular, titlesec, multicol, multirow, xcolor, geometry}
+\documentclass[a4,12pt]{article}
+\usepackage{fontawesome5, fontspec, url, parskip, hyperref, color, graphicx, tabularx, enumitem, titlesec, xcolor, geometry}
 \geometry{scale=0.9}
 \definecolor{linkcolour}{rgb}{0,0.2,0.9}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \newcolumntype{C}{>{\arraybackslash}X}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
-\begin{document}
 \pagestyle{empty}
+\begin{document}
 
+% Header Section
 \begin{tabularx}{\linewidth}{@{}C@{}}
 \Huge{Nathan Paul} \\[10pt]
 \href{https://polarhive.net}{\faIcon{globe} polarhive.net} \ $|$ \
@@ -18,72 +19,57 @@
 \href{mailto:mail@polarhive.net}{\faIcon{envelope} mail@polarhive.net}
 \end{tabularx}
 
+% Experience Section
 \section{Experience}
-\begin{tabularx}{\linewidth}{@{}l r@{}}
-    \textbf{Developer}, ACM Industrial Experience Program & \hfill Feb '24 - Apr '24 \\[3.75pt]
-    \multicolumn{2}{@{}X@{}}{
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
-            \item Worked in a team of 4 to build a static site generator in Go called \textbf{anna}
-            \item Developed features such as a sitemap generator, atom feed, and d3.js Obsidian-like graphs.
-            \item Collaborated on building a setup wizard, bootstrapping themes, and improving CI/CD build pipelines.
-            \item Achieved a build time of \small{284.5 ms} for a 1000-file render benchmark, outperforming Hugo and 11ty.
-            \item Delivered a talk about anna at the \href{https://www.meetup.com/golang-bangalore/events/301697429/}{Go Bangalore} meetup.
-        \end{itemize}
-    \end{minipage}}
-\end{tabularx}
+\textbf{Backend Developer}, \textbf{Phase-R} \hfill Jan '25 – Present \\
+• Implemented hydration and nutrition tracking features using \textbf{Go} and \textbf{Gin}. \\
+• Tested API endpoints, tracking and data ingestion. \textbf{MongoDB}
 
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-  B.Tech in \textbf{Computer Science \& Engineering} (ongoing), \textbf{\href{https://pes.edu}{PES University}} & \hfill 2023 - 2027 \\[3.75pt]
-\end{tabularx}
-\textbf{ISFCR Dean's Award}: Ranked 6th out of 250 participants in a jeopardy-style CTF hackathon.
+\textbf{Developer}, \textbf{ACM Industrial Experience Program} \hfill Feb '24 – Apr '24 \\
+• Part of the team that built \textbf{anna}, a static site generator in Go \\
+• Achieved \textbf{284.5 ms} render time for 1000-file \href{https://github.com/anna-ssg/anna/actions}{benchmark}, outperforming Hugo and 11ty \\
+• Created a sitemap generator, RSS feeds, and an interactive tag graph powered by D3.js \\
+• Set up CI/CD pipelines and theme bootstrapping \\
+• Delivered a talk at the \href{https://www.meetup.com/golang-bangalore/events/301697429/}{76th} Go Bangalore meetup.
 
-\begin{tabularx}{\linewidth}{@{}l r@{}}
-    \multicolumn{2}{@{}X@{}}{
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
-            \item \textbf{{\href{https://www.hsp-ec.xyz}{HSP PESU}: Technical Mentor}} \hfill
-            \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
-                \item Mentored participants in building \href{https://github.com/psh-shell}{psh}, a POSIX-like shell. 
-                \item Helped maintain the new club \href{https://tiramisu-dev.netlify.app}{website}.
-                \item Delivered talks on \textbf{jukebox} and \textbf{anna} at the HSP Mentor Expo and Fireside talks.
-            \end{itemize}
-            \item \textbf{{\href{https://pesuecc.acm.org}{ACM PESU}: Member}} \hfill
-            \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
-		        \item Maintainer lead, helped organize Hacknight 6.0
-                \item Helped fix CI-tooling and maintain the new club \href{https://acmpesuecc.github.io}{website}.
-                \item Mentored participants at various workshops at university.
-            \end{itemize}
-            \item \textbf{{\href{https://gdsc.community.dev/pes-university-electronic-city-campus-bengaluru-india/}{GDSC PESU}: Member}} \hfill
-            \begin{itemize}[nosep, leftmargin=1em, itemsep=3pt]
-                \item Part of the design-team, that helped organize the Override hackathon.
-                \item Delivered a \href{https://polarhive.net/talks/gdsc-foss-101/}{talk} -- FOSS 101
-            \end{itemize}
-        \end{itemize}
-    \end{minipage}}
-\end{tabularx}
-
+% Skills Section
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Computing & \normalsize{C, Python, Git, Go, BASH, Docker, Vim, GNU/Linux, Nix, Observability} \\
-Writing  & \normalsize{Blogging, \LaTeX, Technical Writing, Free Software documentation} \\  
-Privacy/Security & \normalsize{Self-hosting \& decentralization, OSINT at CTFs} \\  
-\end{tabularx}
+\textbf{Languages:} Go, Python, Bash, C, Nix, CSS \\
+\textbf{Technologies:} Git, Docker, GNU/Linux, Vim, Observability \\
+\textbf{Writing and Communication:} Blogging, \LaTeX, Free Software Documentation
 
+% Projects Section
 \section{Projects}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    \textbf{\href{https://github.com/anna-ssg/anna}{anna}} & Lightning fast static site generator written in Go \\
-    \textbf{\href{https://github.com/psh-shell/psh}{psh}} & A fancy POSIX like shell written in C \\
-    \textbf{\href{https://github.com/polarhive/py-typer}{py-typer}} & A speed typing test written in Python \\
-    \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}} & Listen to your LastFM music recommendations using mpd, yt-dlp \& python \\
-    \textbf{\href{https://polarhive.net/pasta}{pasta}} & Simple pastebin service written in Go \\
-    \textbf{\href{https://polarhive.net/bullet}{bullet}} & Collate similar articles from various RSS feeds using cosine similarity    \\
-    \href{https://polarhive.net/videos}{videos} & I produce YouTube videos about tech, privacy \& libre software \\
-    \href{https://polarhive.net/arceo}{arceo} & A blocklist against social media, news, entertainment \& consumerism \\
-    \href{https://polarhive.net/ammachiskathas}{Ammachis Kathas} & Malayalam short stories (an audiobook) \\
-\end{tabularx}
+• \textbf{\href{https://github.com/anna-ssg/anna}{anna}}: Lightning-fast static site generator written in Go. \\
+• \textbf{\href{https://github.com/polarhive/py-typer}{py-typer}}: A speed typing test written in Python. \\
+• \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}}: Queue LastFM music recommendations using mpd, yt-dlp, and Python. \\
+• \textbf{\href{https://polarhive.net/lava}{lava}}: Node daemon that periodically saves bookmarked articles to your Obsidian vault. \\
+• \textbf{\href{https://polarhive.net/pasta}{pasta}}: Minimal pastebin service written in Go. \\
+• \textbf{\href{https://polarhive.net/bullet}{bullet}}: Collate similar articles from various RSS feeds using cosine similarity.
 
-\vfill
+
+% Education Section
+\section{Education}
+\textbf{B.Tech in Computer Science \& Engineering}, PES University \hfill 2023 - 2027 \\
+\textbf{ISFCR Dean's Award}: Ranked 6th out of 250 participants in a jeopardy-style CTF.
+
+\textbf{HSP PESU} \\
+• Maintained the new club \href{https://tiramisu-hsp.netlify.app}{website}. (Now powered by anna) \\
+• Mentor panel for \href{https://github.com/psh-shell}{psh}, a POSIX-like shell. \\
+• Presented \textbf{jukebox} and \textbf{anna} at HSP Mentor Expo and Fireside Talks.
+
+\textbf{ACM PESU} \\
+• Maintainer Lead for Hacknight 6.0. \\
+• Technical Mentor at various workshops.
+
+\textbf{GDSC PESU} \\
+• Hosted a workshop \href{https://polarhive.net/talks/gdsc-foss-101/}{FOSS 101} \\
+• Designed Team, Override: GDSC Solutions Challenge hackathon.
+
+\section{Misc}
+\href{https://polarhive.net/videos}{Videos} YouTube channel focused on tech, privacy, and libre software.\\
+\href{https://polarhive.net/arceo}{arceo} Blocklist against social media, news, and consumerism. \\
+\href{https://polarhive.net/ammachiskathas}{Ammachis Kathas} Malayalam short stories (audiobook) \\
+
 \href{https://github.com/polarhive/resume}{\faIcon{history}} Last build: \today
 \end{document}
