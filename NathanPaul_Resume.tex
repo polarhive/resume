@@ -3,6 +3,7 @@
 \geometry{scale=0.9}
 \definecolor{linkcolour}{rgb}{0,0.2,0.9}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\newcommand{\tech}[1]{\textbf{\textcolor{black}{#1}}}
 \newcolumntype{C}{>{\arraybackslash}X}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{8pt}{8pt}
@@ -15,13 +16,13 @@
 \href{https://polarhive.net}{\faIcon{globe} polarhive.net/contact} \ $|$ \
 \href{https://github.com/polarhive}{\faIcon{github} polarhive} \ $|$ \
 \href{https://linkedin.com/in/polarhive}{\faIcon{linkedin} polarhive} \ $|$ \
-\href{https://polarhive.net/email}{\faIcon{envelope} 0x78DBFBE8B325A5A9}
+\href{https://polarhive.net/email}{\faIcon{envelope} mail@polarhive.net}
 \end{tabularx}
 
 % Experience Section
 \section{Experience}
 
-\textbf{Research Intern} @ \textbf{\href{https://theinnovationlab.in/projects?project=MiCoz}{PES Innovation Lab}} (formerly Microsoft Innovation Lab) \hfill June '25 – Jul '25 \\
+\textbf{Research Intern} @ \textbf{\href{https://theinnovationlab.in/projects?project=MiCoz}{PES Innovation Lab}} (formerly Microsoft Innovation Lab) \hfill Jun '25 – Jul '25 \\
 • Worked on \textbf{MiCoz}, a research project exploring \href{https://dl.acm.org/doi/10.1145/2815400.2815409}{tuning methodologies} for microservices\\
 • Used virtual speedup to identify key bottleneck services across nodes. \\
 • Prototyped latency instrumentation on real and simulated DAGs to pinpoint true bottlenecks. \\
@@ -57,23 +58,23 @@ FOSS
 
 % Projects Section
 \section{Projects}
-• \textbf{\href{https://github.com/anna-ssg/anna}{anna}}: Lightning-fast static site generator written in Go. \\
-• \textbf{\href{https://github.com/polarhive/py-typer}{py-typer}}: A speed typing test written in Python. \\
-• \textbf{\href{https://polarhive.net/pasta}{pasta}}: Minimal pastebin service written in Go. \\
-• \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}}: Queue LastFM music recommendations using \textbf{mpd}, \textbf{yt-dlp}, and Python. \\
-• \textbf{\href{https://polarhive.net/lava}{lava}}: Node daemon that periodically saves bookmarked articles to your Obsidian vault. \\
-• \textbf{\href{https://github.com/polarhive/wombat}{wombat}}: Wikipedia crawler that visualizes relationships between articles. \\
-• \textbf{\href{https://polarhive.net/bullet}{bullet}}: Collates similar articles from various RSS feeds using cosine similarity. \\
-• \textbf{\href{https://github.com/polarhive/drago}{drago}}: DAG-based workflow engine (PoC)
+\begin{small}
+\begin{itemize}[nolistsep, nosep, partopsep=0pt, leftmargin=1.2em, labelsep=0.6em, itemsep=0pt, topsep=0pt, parsep=0pt]
+	\item \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}} --- Headless music-queueing service that pulls LastFM recommendations and enqueues tracks into MPD using \textbf{yt-dlp}.
+	\item \textbf{\href{https://polarhive.net/lava}{lava}} --- Node daemon that saves bookmarked articles into an Obsidian vault. Fetches, sanitises and organises content into markdown notes for offline reading and annotation.
+	\item \textbf{\href{https://github.com/polarhive/wombat}{wombat}} --- Wikipedia crawler that builds article graphs and visualises relationships between pages.
+	\item \textbf{\href{https://polarhive.net/pasta}{pasta}} --- Minimal pastebin service written in Go.
+	\item \textbf{\href{https://github.com/polarhive/drago}{drago}} --- A proof-of-concept DAG-based workflow engine demonstrating lightweight scheduling and pluggable task runners.
+\end{itemize}
+\end{small}
 
-% Misc Section
-\section{Links}
-• \textbf{\href{https://polarhive.net/pow}{Proof of Work}}: A reverse chronological record of my work. \\
-• \href{https://polarhive.net/videos}{Videos}: YouTube channel focused on tech, privacy, and libre software.\\
-• \href{https://polarhive.net/photos}{Photos}: Photos that I have shot and edited. \\
-• \href{https://polarhive.net/ammachiskathas}{Ammachis Kathas}: Malayalam short stories (an audiobook). \\
-• \href{https://polarhive.net/arceo}{arceo}: Blocklist against social media, news \& consumerism. \\
-• \href{https://polarhive.net/wiki}{wiki}: My digital garden, a linkstash with web clippings.
+\begin{small}
+\section{FOSS contributions}
+\begin{itemize}[nolistsep, nosep, partopsep=0pt, leftmargin=1.2em, labelsep=0.6em, itemsep=0pt, topsep=0pt, parsep=0pt]
+	\item \textbf{\href{https://github.com/anna-ssg/anna}{anna}}: A lightning fast static site generator written in \tech{Go}. Implements parallel rendering, live-reload and a minimal runtime; used to power fast personal sites and benchmarks where it outperformed Eleventy and Hugo.
+	\item \textbf{\href{https://github.com/homebrew-ec-foss/eloop}{eloop}}: A serverless all-in-one event-management system (RBAC, dynamic forms, QR checkins). We served 250+ concurrent users at our last hackathon. \tech{NextJS}, \tech{Google OAuth}, \tech{Vercel}, \tech{TursoDB}, \tech{Tailwind}.
+\end{itemize}
+\end{small}
 
 % Education Section
 \section{Education}
@@ -81,12 +82,12 @@ FOSS
 \textbf{ISFCR Dean's Award:} Ranked 6th out of 250 participants in a jeopardy-style CTF.
 
 \textbf{Mentor Lead @HSP PESU} \hfill June '25 – Present \\
-• Leading the mentor team and coordinating club-wide initiatives \\
+• Leading the mentor-team and coordinating club-wide mentorship initiatives \\
 • In charge of \textbf{Tilde 4.0}, HSP's flagship summer-mentorship program \\
 • Overseeing technical contributions and workshops for the '26 term
 
 \textbf{Technical Mentor @HSP PESU} \hfill Oct '23 – May '25 \\
-• Maintainer of the club \href{https://tiramisu-hsp.netlify.app}{website}, powered by anna \\
+• Maintainer of the club \href{https://hsp-ec.xyz}{website}, powered by Anna \\
 • Mentored contributors to \href{https://github.com/homebrew-ec-foss/psh}{psh}, a POSIX-like shell \\
 • Presented \textbf{jukebox} and \textbf{anna} at HSP Mentor Expo and Fireside Talks
 
@@ -97,6 +98,15 @@ FOSS
 \textbf{Member @GDSC PESU} \hfill Aug '23 – Sept '24 \\
 • Hosted \href{https://polarhive.net/talks/gdsc-foss-101/}{FOSS 101}, an introductory workshop on open source \\
 • Designer for Override, a Google Solutions Challenge hackathon
+
+% Misc Section
+\section{Misc}
+• \textbf{\href{https://polarhive.net/pow}{Proof of Work}}: A reverse chronological record of my work. \\
+• \href{https://polarhive.net/videos}{Videos}: YouTube channel focused on tech, privacy, and libre software.\\
+• \href{https://polarhive.net/photos}{Photos}: Photos that I have shot and edited. \\
+• \href{https://polarhive.net/ammachiskathas}{Ammachis Kathas}: Malayalam short stories (an audiobook). \\
+• \href{https://polarhive.net/arceo}{arceo}: Blocklist against social media, news \& consumerism. \\
+• \href{https://polarhive.net/wiki}{wiki}: My digital garden, a linkstash with web clippings.
 
 \noindent\rule{\textwidth}{0.4pt}
 
