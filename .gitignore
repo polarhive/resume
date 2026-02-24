@@ -1,2 +1,4 @@
 *.out
 *.aux
+.DS_Store
+versions/**

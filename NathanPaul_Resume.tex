@@ -1,4 +1,4 @@
-\documentclass[a4,12pt]{article}
+\documentclass[a4,10pt]{article}
 \usepackage{fontawesome5, fontspec, url, parskip, hyperref, color, graphicx, tabularx, enumitem, titlesec, xcolor, geometry}
 \geometry{scale=0.9}
 \definecolor{linkcolour}{rgb}{0,0.2,0.9}
@@ -8,9 +8,10 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{8pt}{8pt}
 \pagestyle{empty}
+
 \begin{document}
 
-% Header Section
+% Header
 \begin{tabularx}{\linewidth}{@{}C@{}}
 \Huge{Nathan Paul} \\[10pt]
 \href{https://polarhive.net}{\faIcon{globe} polarhive.net/contact} \ $|$ \
@@ -19,7 +20,7 @@
 \href{https://polarhive.net/email}{\faIcon{envelope} mail@polarhive.net}
 \end{tabularx}
 
-% Experience Section
+% Experience
 \section{Experience}
 
 \textbf{Research Intern} @ \textbf{\href{https://theinnovationlab.in/projects?project=MiCoz}{PES Innovation Lab}} (formerly Microsoft Innovation Lab) \hfill Jun '25 – Jul '25 \\
@@ -39,27 +40,17 @@
 • \textbf{DevOps:} Implemented CI/CD pipelines, a setup wizard, and theme bootstrapping. \\
 • Presented at the \href{https://www.meetup.com/golang-bangalore/events/301697429/}{76th Go Bangalore meetup}.
 
-% Skills Section
-\section{Skills}
-\textbf{Languages:} Go, Python, Bash, C, Nix, CSS, Redis, Postgres \\
-\textbf{Technologies:} Git, Docker, GNU/Linux, Vim, Observability \\
-\textbf{Writing, Communication:} Blogging, \LaTeX, Free Software Documentation, RFCs
+% Skills
+\section{Skills \& Technologies}
 
-% Interests Section
-\section{Interests}
-FOSS
-• Privacy
-• Protocols
-• GNU/Linux
-• Systems
-• IoT
-• Startups
-• Microservices
+\textbf{Languages:} Go, Python, Bash | Linux, Docker, K8S, Git, Nix, SQLite, Redis, Postgres, eBPF
 
 % Projects Section
 \section{Projects}
 \begin{small}
 \begin{itemize}[nolistsep, nosep, partopsep=0pt, leftmargin=1.2em, labelsep=0.6em, itemsep=0pt, topsep=0pt, parsep=0pt]
+	\item \textbf{\href{https://github.com/polarhive/ash}{ash}} --- Event-driven Matrix bot framework with pluggable command system, AI integrations (Groq), and webhook support.
+	\item \textbf{\href{https://github.com/polarhive/linkstash}{linkstash}} --- Link management and bookmarking service with tagging and categorization.
 	\item \textbf{\href{https://github.com/polarhive/jukebox}{jukebox}} --- Headless music-queueing service that pulls LastFM recommendations and enqueues tracks into MPD using \textbf{yt-dlp}.
 	\item \textbf{\href{https://polarhive.net/lava}{lava}} --- Node daemon that saves bookmarked articles into an Obsidian vault. Fetches, sanitises and organises content into markdown notes for offline reading and annotation.
 	\item \textbf{\href{https://github.com/polarhive/wombat}{wombat}} --- Wikipedia crawler that builds article graphs and visualises relationships between pages.
@@ -79,12 +70,12 @@ FOSS
 % Education Section
 \section{Education}
 \textbf{B.Tech in Computer Science \& Engineering} at PES University \hfill 2023 – 2027 \\
-\textbf{ISFCR Dean's Award:} Ranked 6th out of 250 participants in a jeopardy-style CTF.
+\textbf{ISFCR Dean's Award:} Ranked 6th out of 250 participants in a jeopardy-style CTF. \\
+\textbf{DAC (Distinction Scholarship):} Merit-based scholarship for academic excellence in Sem 5.
 
 \textbf{Mentor Lead @HSP PESU} \hfill June '25 – Present \\
 • Leading the mentor-team and coordinating club-wide mentorship initiatives \\
-• In charge of \textbf{Tilde 4.0}, HSP's flagship summer-mentorship program \\
-• Overseeing technical contributions and workshops for the '26 term
+• In charge of \textbf{Tilde 4.0}, HSP's flagship summer-mentorship program
 
 \textbf{Technical Mentor @HSP PESU} \hfill Oct '23 – May '25 \\
 • Maintainer of the club \href{https://hsp-ec.xyz}{website}, powered by Anna \\
@@ -95,21 +86,6 @@ FOSS
 • Maintainer Lead for Hacknight 6.0 \\
 • Mentored contributors to \href{https://github.com/polarhive/nimbus}{nimbus}, a TUI client for Bluesky
 
-\textbf{Member @GDSC PESU} \hfill Aug '23 – Sept '24 \\
-• Hosted \href{https://polarhive.net/talks/gdsc-foss-101/}{FOSS 101}, an introductory workshop on open source \\
-• Designer for Override, a Google Solutions Challenge hackathon
-
-% Misc Section
-\section{Misc}
-• \textbf{\href{https://polarhive.net/pow}{Proof of Work}}: A reverse chronological record of my work. \\
-• \href{https://polarhive.net/videos}{Videos}: YouTube channel focused on tech, privacy, and libre software.\\
-• \href{https://polarhive.net/photos}{Photos}: Photos that I have shot and edited. \\
-• \href{https://polarhive.net/ammachiskathas}{Ammachis Kathas}: Malayalam short stories (an audiobook). \\
-• \href{https://polarhive.net/arceo}{arceo}: Blocklist against social media, news \& consumerism. \\
-• \href{https://polarhive.net/wiki}{wiki}: My digital garden, a linkstash with web clippings.
-
-\noindent\rule{\textwidth}{0.4pt}
-
-\href{https://github.com/polarhive/resume}{\faIcon{history}} \today
-
+% \noindent\rule{\textwidth}{0.4pt}
+% \href{https://github.com/polarhive/resume}{\faIcon{history}} \today
 \end{document}
